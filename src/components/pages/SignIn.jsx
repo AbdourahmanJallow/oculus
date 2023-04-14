@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function SignIn() {
@@ -21,11 +21,9 @@ function SignIn() {
 
     return (
         <>
-            <div className="flex flex-col justify-center items-center w-96 md:min-w-fit lg:w-[1000px] lg:h-[700px] mt-5">
-                <h2 className="underline text-3xl font-bold mb-6 z-10">
-                    Sign In
-                </h2>
-                <div className="rounded-lg shadow-lg px-20 py-6 w-full">
+            <div className="flex flex-col justify-center items-center min-w-fit mt-5 container mx-auto max-w-md">
+                <h2 className=" text-3xl font-bold mb-6">Sign In</h2>
+                <div className="rounded-lg shadow-lg p-8 w-full">
                     <form
                         onSubmit={handleSubmit}
                         className="w-full flex flex-col gap-6"
@@ -34,7 +32,7 @@ function SignIn() {
                             <input
                                 type="text"
                                 placeholder="Email"
-                                className="input input-bordered input-sm w-full border-2 border-[#014715]"
+                                className="input input-bordered input-sm md:input-md w-full border-2"
                                 id="email"
                                 value={email}
                                 onChange={handleChange}
@@ -44,7 +42,7 @@ function SignIn() {
                             <input
                                 type="text"
                                 placeholder="Password"
-                                className="input input-bordered input-sm w-full border-2 border-[#014715]"
+                                className="input input-bordered input-sm md:input-md w-full border-2"
                                 id="password"
                                 value={password}
                                 onChange={handleChange}

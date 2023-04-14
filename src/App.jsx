@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import Sidebar from "./components/layout/Sidebar";
 import Home from "./components/pages/Home";
 import SignUp from "./components/pages/SignUp";
 import SignIn from "./components/pages/SignIn";
@@ -19,9 +20,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
     return (
         <Router>
-            <div className="flex flex-col justify-between h-screen items-center">
-                {/* <Header /> */}
-                <main>
+            <div className="flex h-screen">
+                <Sidebar />
+                <main className="flex flex-col items-center justify-start w-full bg-[#f8f8f8]">
+                    <Header />
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/sign-up" element={<SignUp />} />
@@ -36,7 +38,7 @@ function App() {
                         />
                     </Routes>
                 </main>
-                <Footer />
+                {/* <Footer /> */}
             </div>
         </Router>
     );

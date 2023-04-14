@@ -1,10 +1,16 @@
 import React from "react";
 
 function Header() {
+    /* 
+        blue colors
+        bg: #d4f1f4
+        text: #05445e
+        hover: #189AB4
+        extra: #75E6DA
+     */
     return (
-        <div className="relative min-h-fit w-screen flex flex-col justify-center items-center">
-            <div className="absolute bg-[#014715] w-full h-28 top-0 blur-sm"></div>
-            <div className="bg-[#014715] w-[580px] md:w-[1200px] h-52 absolute top-0 rounded-b-md"></div>
+        <div className="w-full mx-auto flex justify-center items-center py-3 px-3 bg-[#189AB4] mb-4">
+            <h1 className="text-5xl font-bold text-[#05445e]">Rent Ma</h1>
         </div>
     );
 }

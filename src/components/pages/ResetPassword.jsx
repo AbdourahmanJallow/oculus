@@ -6,11 +6,11 @@ function ResetPassword() {
 
     return (
         <>
-            <div className="flex flex-col justify-center items-center w-96 md:min-w-fit lg:w-[1000px] lg:h-[700px] mt-5">
+            <div className="flex flex-col justify-center items-center min-w-fit mt-5 container mx-auto max-w-md">
                 <h2 className="underline text-3xl font-bold mb-6 z-10">
                     Reset Password
                 </h2>
-                <div className="rounded-lg shadow-2xl px-20 py-6 w-full">
+                <div className="rounded-lg shadow-lg p-8 w-full">
                     <form
                         onSubmit={handleSubmit}
                         className="w-full flex flex-col gap-6"
@@ -19,7 +19,7 @@ function ResetPassword() {
                             <input
                                 type="text"
                                 placeholder="code"
-                                className="input input-bordered input-sm w-full border-2 border-[#014715]"
+                                className="input input-bordered input-sm md:input-md w-full border-2"
                             />
                         </div>
                         <div className="form-control items">
